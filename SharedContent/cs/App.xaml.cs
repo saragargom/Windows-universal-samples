@@ -9,6 +9,9 @@
 //
 //*********************************************************
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using System;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -32,6 +35,8 @@ namespace SDKTemplate
         {
             this.InitializeComponent();
             this.Construct();
+            AppCenter.Start("2c37d861-1143-4f0d-9d8a-0ebee9075b63",
+                   typeof(Analytics), typeof(Crashes));
         }
 
         /// <summary>
